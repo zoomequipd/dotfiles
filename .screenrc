@@ -1,0 +1,23 @@
+activity "%c activity -> %n%f %t^G"
+multiuser on
+altscreen on
+autodetach on
+deflogin on
+defflow off
+term linux
+termcapinfo xterm ti@:te@
+defscrollback 100000
+defutf8 on
+msgwait 10
+#nethack on
+nonblock on
+startup_message off
+vbell on
+vbell_msg "bell on %t (%n)"
+escape ^Zz
+bind \134 quit
+bell_msg "bell on %t (%n)  !!! Ding !!!"
+terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+hardstatus alwayslastline
+caption always "%{= kb}[ %=%{w}%?%-Lw%?%{b}(%{W}%n*%f %t%?(%u)%?%{b})%{w}%?%+Lw%?%?%= %{b}][%{B}${USER}%H%{b}][%{B}%m.%d.%Y %{W}%0c:%s%{b}]"
+sorendition +b kG
